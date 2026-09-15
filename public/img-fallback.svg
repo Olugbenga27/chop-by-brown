@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a2b20"/>
+      <stop offset="0.55" stop-color="#2b1d15"/>
+      <stop offset="1" stop-color="#201511"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <g fill="#B98A3E">
+    <circle cx="400" cy="440" r="120" opacity="0.14"/>
+    <circle cx="400" cy="440" r="76" opacity="0.2"/>
+  </g>
+  <text x="400" y="455" font-family="Georgia, serif" font-style="italic" font-size="64" fill="#F5EFE4" text-anchor="middle" opacity="0.9">CB</text>
+  <text x="400" y="560" font-family="Georgia, serif" font-size="18" letter-spacing="6" fill="#CFBFA4" text-anchor="middle">CHOP BY BROWN</text>
+</svg>
