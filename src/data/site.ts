@@ -3,6 +3,8 @@ export const site = {
   email: "danielijika@gmail.com",
   whatsappNumber: "+234 904 017 3103",
   whatsappLink: "https://wa.me/2349040173103",
+  phoneNumber: "+234 904 017 3103",
+  phoneLink: "tel:+2349040173103",
   tagline: "Private Chef & Dining Experiences",
   description:
     "Chop by Brown creates unforgettable private dining and chef experiences for intimate dinners, celebrations, events and special occasions.",

@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Outlet, useLocation } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
+import { PhoneButton } from "../components/PhoneButton"
 import { WhatsAppButton } from "../components/WhatsAppButton"
 
 function ScrollToTop() {
@@ -25,6 +26,7 @@ export function Layout() {
       <main id="main">
         <Outlet />
       </main>
+      <PhoneButton />
       <WhatsAppButton />
       <Footer />
     </>

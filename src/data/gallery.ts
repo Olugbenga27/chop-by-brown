@@ -1,4 +1,6 @@
 import { images } from "./images"
+import food1 from "../images/food-1.jpg"
+import food2 from "../images/food-2.jpg"
 
 export type GalleryItem = {
   id: string
@@ -63,6 +65,20 @@ export const galleryItems: GalleryItem[] = [
     src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
     alt: "Charred grilled meat served on a dark plate",
     caption: "Slow smoke over fire",
+    span: "",
+  },
+  {
+    id: "g9",
+    src: food1,
+    alt: "Nigerian home-cooked food served at the table",
+    caption: "Naija flavours",
+    span: "",
+  },
+  {
+    id: "g10",
+    src: food2,
+    alt: "A plate of classic Nigerian cuisine with rich stew",
+    caption: "Home food, Brown style",
     span: "",
   },
 ]

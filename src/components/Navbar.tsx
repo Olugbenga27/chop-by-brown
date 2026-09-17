@@ -1,19 +1,16 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import { Menu, X } from "lucide-react"
 import { Link, NavLink } from "react-router-dom"
-import { navLinks } from "../data/site"
+import { navLinks, site } from "../data/site"
+import { PhoneIcon, WhatsAppIcon } from "./icons"
+
+const whatsappMessage = encodeURIComponent(
+  "Hello Brown, I'd love to enquire about a private dining experience.",
+)
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener("scroll", onScroll, { passive: true })
-    onScroll()
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
 
   useEffect(() => {
     const prev = document.body.style.overflow
@@ -34,7 +31,7 @@ export function Navbar() {
   }, [open, close])
 
   return (
-    <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
+    <header className="nav">
       <nav className="nav__inner container">
         <Link to="/" className="nav__brand" onClick={close}>
           <span className="nav__brand-line">CHOP</span>
@@ -75,6 +72,7 @@ export function Navbar() {
           className={`nav__panel ${open ? "nav__panel--open" : ""}`}
           role="dialog"
           aria-label="Mobile navigation"
+          aria-modal={open}
           aria-hidden={!open}
         >
           <ul className="nav__panel-links" role="list">
@@ -102,6 +100,26 @@ export function Navbar() {
           >
             Book a Private Dining
           </Link>
+          <div className="nav__panel-actions">
+            <a
+              href={site.phoneLink}
+              className="nav__panel-action"
+              tabIndex={open ? 0 : -1}
+            >
+              <PhoneIcon size={15} strokeWidth={1.75} aria-hidden="true" />
+              Call Brown
+            </a>
+            <a
+              href={`${site.whatsappLink}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav__panel-action"
+              tabIndex={open ? 0 : -1}
+            >
+              <WhatsAppIcon size={15} aria-hidden="true" />
+              WhatsApp
+            </a>
+          </div>
         </div>
       </nav>
     </header>
